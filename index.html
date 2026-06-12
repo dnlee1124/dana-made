@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>dana made 🌷</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #FFF5F7;
+      --card: #FFFFFF;
+      --pink: #FF7BAC;
+      --pink-light: #FFD6E7;
+      --lavender: #C9B8F5;
+      --mint: #A8E6CF;
+      --peach: #FFCBA4;
+      --sky: #B3E5FC;
+      --text: #3D2C35;
+      --text-sub: #A08090;
+      --shadow: rgba(255, 123, 172, 0.15);
+    }
+
+    body {
+      font-family: 'Gowun Dodum', 'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 10% 15%, #FFE4EE 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, #EDE4FF 0%, transparent 40%);
+      min-height: 100vh;
+      padding: 60px 24px 80px;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .header-emoji {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 12px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    h1 span {
+      color: var(--pink);
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--text-sub);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 24px;
+      color: var(--text-sub);
+      font-size: 13px;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--pink-light);
+    }
+
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--card);
+      border-radius: 16px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 4px 20px var(--shadow);
+      border: 1.5px solid transparent;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--card-accent, var(--pink));
+      border-radius: 16px 0 0 16px;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px var(--shadow);
+      border-color: var(--pink-light);
+    }
+
+    .card-emoji {
+      font-size: 28px;
+      width: 48px;
+      height: 48px;
+      background: var(--card-bg, #FFF0F5);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .card-info {
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-desc {
+      margin-top: 3px;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .card-arrow {
+      font-size: 18px;
+      color: var(--pink);
+      flex-shrink: 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 52px;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    footer span {
+      font-size: 16px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .header-emoji { animation: none; }
+      .card { transition: none; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 40px 16px 60px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="header-emoji">🌸</span>
+      <h1>dana <span>made</span></h1>
+      <p class="subtitle">다나가 직접 만든 도구들이에요 ✨</p>
+    </header>
+
+    <div class="divider">✦ 파일 목록 ✦</div>
+
+    <div class="card-grid">
+      <a href="홈택스_수입신청서_작성기.html" class="card" style="--card-accent:#FF7BAC; --card-bg:#FFF0F5;">
+        <div class="card-emoji">📄</div>
+        <div class="card-info">
+          <div class="card-title">홈택스 수입신청서 작성기</div>
+          <div class="card-desc">수입신청서를 쉽게 작성해요</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+
+      <!-- 새 파일을 추가할 때 아래 형식으로 복사하세요:
+      <a href="파일명.html" class="card" style="--card-accent:#C9B8F5; --card-bg:#F3F0FF;">
+        <div class="card-emoji">🗂️</div>
+        <div class="card-info">
+          <div class="card-title">표시할 이름</div>
+          <div class="card-desc">간단한 설명</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      색상 옵션: 라벤더 #C9B8F5, 민트 #A8E6CF, 피치 #FFCBA4, 스카이 #B3E5FC
+      -->
+    </div>
+
+    <footer>
+      <span>🌷</span><br/>
+      dana-made · made with love
+    </footer>
+  </div>
+</body>
+</html>
